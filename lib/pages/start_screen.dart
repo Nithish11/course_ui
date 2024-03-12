@@ -1,5 +1,6 @@
+import 'package:course_design/pages/login_screen.dart';
 import 'package:flutter/material.dart';
-// import 'package:google_fonts/google_fonts.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class start_screen extends StatefulWidget {
   const start_screen({super.key});
@@ -26,8 +27,8 @@ class _start_screenState extends State<start_screen> {
             ),
           ),
           Text(
-            "Learn at home!",
-            style: TextStyle(
+            "Learn at home",
+            style: GoogleFonts.aBeeZee(
                 fontSize: 50,
                 fontWeight: FontWeight.w900,
                 color: Color.fromARGB(255, 6, 12, 73)),
@@ -59,7 +60,9 @@ class _start_screenState extends State<start_screen> {
                 borderRadius: BorderRadius.circular(12.0),
               ),
             ),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(context,MaterialPageRoute(builder: (context) =>login_page()));
+            },
           ),
         ],
       ),
